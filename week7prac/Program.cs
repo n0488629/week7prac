@@ -11,10 +11,12 @@ namespace week7prac
     {
         public static int CountWords(string fileName) 
         {
+            // read file to new string
             string content = File.ReadAllText(fileName);
+            // make array to hold split file
             string[] strings;
-            strings = content.Split(' ');
-            int count = strings.Length;
+            strings = content.Split(' '); // array = content split by spaces
+            int count = strings.Length; // length is equal to number of words
             return count;
         }
         static void Main(string[] args)
